@@ -1,0 +1,80 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Backbone veiw test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="dist/css/bootstrap.css">
+        <link rel="stylesheet" href="dist/css/main.css">
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    	<!-- Navbar
+    	================================================== -->
+    	<div class="navbar navbar-inverse navbar-fixed-top">
+    	  <div class="navbar-inner">
+    	    <div class="container">
+    	      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    	        <span class="icon-bar"></span>
+    	        <span class="icon-bar"></span>
+    	        <span class="icon-bar"></span>
+    	      </button>
+    	      <a class="brand" href="./index.html">Backbone</a>
+    	      <div class="nav-collapse collapse">
+
+    	      </div>
+    	    </div>
+    	  </div>
+    	</div>
+
+
+    	<!-- Subhead
+    	================================================== -->
+    	<header class="jumbotron subhead" id="overview">
+    	  <div class="container">
+    	    <h1>Backbone Test</h1>
+    	    <p class="lead">お行儀よくviewを生成する</p>
+    	  </div>
+    	</header>
+
+    	<section class="container" id="viewTest">
+			<div class="input-append">
+			  <input class="input-xxlarge" id="appendedInputButton" type="text" placeholder="Viewのタイトル">
+			  <button class="btn" type="button" id="btn-newView">New View!</button>
+			</div>
+
+    	</section>
+
+
+
+    	<!-- テンプレート detail-main-infor  -->
+    	<script id="viewTemplate" type="text/x-jsrender">
+			<section class="myView">
+				
+				<div class="bs-docs-example">
+				<h4 id="body-copy">View Title: {{:name}}</h4>
+				  <p>このViewのタイトル：{{:name}}。</p>
+				  <div class="btn stat1">状態 on</div>
+				  <div class="btn stat2">状態 off</div>
+				  <div class="btn stat3">状態 null</div>
+				</div>
+				<pre class="prettyprint">このViewの状態：{{:stat}}</pre>
+			</section>
+    	</script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="dist/js/vender/jquery.min.js"></script>
+        <script src="dist/js/vender/underscore-min.js"></script>
+        <script src="dist/js/vender/backbone-min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+        <!-- build:js scripts/main.js -->
+        <script src="dist/js/vender/jsrender.js"></script>
+        <script src="dist/js/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
